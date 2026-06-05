@@ -1,0 +1,7 @@
+.DS_Store
+
+auth.zsh
+
+plugins/
+.zcompdump
+.zsh_history
