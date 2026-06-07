@@ -27,7 +27,7 @@
 git clone --depth 1 https://github.com/16-34/LUE-ZSH ~/.config/zsh
 ```
 
-然后在 `/etc/zshenv` 中配置 `ZDOTDIR`：
+然后在 `/etc/zshenv`（有时是`/etc/zsh/zshenv`）中配置 `ZDOTDIR`：
 
 ```bash
 export ZDOTDIR="$HOME/.config/zsh"

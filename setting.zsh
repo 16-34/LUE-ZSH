@@ -8,23 +8,6 @@ bindkey '\e[1;3D' backward-word
 # Alt + 方向右：跳转到下一个词
 bindkey '\e[1;3C' forward-word
 
-## Tab 补全
-ZCOMPDUMP="$XDG_CACHE_HOME/zcompdump"
-
-autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-  compinit -d "$ZCOMPDUMP"
-else
-  compinit -C -d "$ZCOMPDUMP"
-fi
-
-# 启用菜单式补全，并允许使用方向键选择候选项
-zstyle ':completion:*' menu select
-# 补全时忽略大小写
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-# 使用 LS_COLORS 配置补全列表中的颜色显示
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-
 # 去掉路径分隔符 /
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 

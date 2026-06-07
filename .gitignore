@@ -5,3 +5,4 @@ auth.zsh
 plugins/
 .zcompdump
 .zsh_history
+.zcompcache/

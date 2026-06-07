@@ -16,7 +16,3 @@ path=(
     "$HOME/.local/bin"
     $path
 )
-
-# editor
-export EDITOR=nvim
-export VISUAL=nvim
