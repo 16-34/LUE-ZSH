@@ -14,6 +14,7 @@
 ├── function.zsh   # 自定义函数
 ├── setting.zsh    # 按键、补全、历史记录等基础设置
 ├── plugin.zsh     # 插件安装、更新、加载逻辑
+├── tmux.zsh       # tmux 配置
 ├── .gitignore     # 忽略本地私密配置、插件目录和缓存文件
 └── README.md      # 项目说明
 ```
