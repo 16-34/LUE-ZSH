@@ -75,23 +75,30 @@ if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init --cmd cd zsh)"
 fi
 
-# 安装：brew install fzf
-if command -v fzf >/dev/null 2>&1; then
-    source <(fzf --zsh)
-    export FZF_DEFAULT_OPTS="
-    --height 40%
-    --layout=reverse
-    --border
-  "
-
-    zplugin_load fzf-tab Aloxaf
+if zplugin_load zsh-autocomplete marlonrichert; then
+    zstyle ':autocomplete:*' min-delay 0.0
+    bindkey              '^I' menu-select
+    bindkey "$terminfo[kcbt]" menu-select
 fi
 
-if zplugin_load zsh-history-substring-search zsh-users; then
-    bindkey "^[[A" history-substring-search-up
-    bindkey "^[[B" history-substring-search-down
-    HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=black,bold,bg=green'
-    HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=black,bold,bg=red'
-fi
+# # 安装：brew install fzf
+# if command -v fzf >/dev/null 2>&1; then
+#     source <(fzf --zsh)
+#     export FZF_DEFAULT_OPTS="
+#     --height 40%
+#     --layout=reverse
+#     --border
+#   "
+
+#     zplugin_load fzf-tab Aloxaf
+# fi
+
+# if zplugin_load zsh-history-substring-search zsh-users; then
+#     bindkey "^[[A" history-substring-search-up
+#     bindkey "^[[B" history-substring-search-down
+#     HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=black,bold,bg=green'
+#     HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=black,bold,bg=red'
+# fi
+
 zplugin_load zsh-autosuggestions zsh-users
 zplugin_load zsh-syntax-highlighting zsh-users
