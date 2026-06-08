@@ -76,7 +76,11 @@ if command -v zoxide >/dev/null 2>&1; then
 fi
 
 if zplugin_load zsh-autocomplete marlonrichert; then
-    zstyle ':autocomplete:*' min-delay 0.0
+    # 补全列表最多占终端高度的一半
+    zstyle -e ':autocomplete:*:*' list-lines 'reply=( $(( LINES / 2 )) )'
+    # 补全延迟
+    zstyle ':autocomplete:*' delay 0.05
+    # <Tab> 切换选中
     bindkey              '^I' menu-select
     bindkey "$terminfo[kcbt]" menu-select
 fi
