@@ -7,11 +7,10 @@
 ```text
 .
 ├── plugins/       # 本地插件安装目录（已被 .gitignore 忽略）
-├── .zshenv        # 全局环境变量、XDG 路径、PATH、默认编辑器等
-├── .zprofile      # 登录 Shell 初始化
+├── .zshenv        # XDG 路径、npm/less 配置、PATH 等全局环境变量
 ├── .zshrc         # Zsh 主入口，按顺序加载各模块
+├── homebrew.zsh   # Homebrew shellenv 初始化（兼容 macOS 与 Linuxbrew）
 ├── alias.zsh      # 常用命令别名
-├── auth.zsh       # 私密配置，例如 token、代理密钥等（已被 .gitignore 忽略）
 ├── function.zsh   # 自定义函数
 ├── setting.zsh    # 按键、补全、历史记录等基础设置
 ├── plugin.zsh     # 插件安装、更新、加载逻辑
@@ -35,21 +34,20 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 重新打开终端
 
-## 相关依赖与插件安装
+## 依赖安装
 
-建议通过 Homebrew 安装依赖工具：
+可通过 Homebrew 按需安装常用工具（以下为推荐工具）：
 
 ```bash
-brew install starship zoxide fzf eza bat ripgrep
+brew install starship zoxide fzf eza bat ripgrep neovim
 ```
 
-首次使用可手动安装默认插件：
+首次使用可按需安装插件（以下为默认插件，也可以在 `~/.config/zsh/plugin.zsh` 中启用其他插件）：
 
 ```bash
+zplugin_install marlonrichert/zsh-autocomplete
 zplugin_install zsh-users/zsh-autosuggestions
 zplugin_install zsh-users/zsh-syntax-highlighting
-zplugin_install zsh-users/zsh-history-substring-search
-zplugin_install Aloxaf/fzf-tab
 ```
 
 更新所有已安装插件：
