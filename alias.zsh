@@ -35,4 +35,4 @@ if command -v nvim >/dev/null 2>&1; then
 fi
 
 alias cls="clear"
-alias reload="source $ZDOTDIR/.zshrc"
+alias reload="source $LUE_ZSH_DIR/.zshrc"

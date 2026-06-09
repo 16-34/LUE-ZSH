@@ -1,3 +1,5 @@
+LUE_ZSH_DIR="$HOME/.config/zsh"
+
 source_if_readable() {
     local file="$1"
 
@@ -6,7 +8,7 @@ source_if_readable() {
     fi
 }
 
-source_if_readable $ZDOTDIR/homebrew.zsh
+source_if_readable $LUE_ZSH_DIR/homebrew.zsh
 
 # 启用菜单式补全，并允许使用方向键选择候选项
 zstyle ':completion:*' menu select
@@ -25,8 +27,8 @@ else
     compinit -C -u -d "$ZCOMPDUMP"
 fi
 
-source_if_readable $ZDOTDIR/auth.zsh
-source_if_readable $ZDOTDIR/function.zsh
-source_if_readable $ZDOTDIR/alias.zsh
-source_if_readable $ZDOTDIR/setting.zsh
-source_if_readable $ZDOTDIR/plugin.zsh
+source_if_readable $LUE_ZSH_DIR/auth.zsh
+source_if_readable $LUE_ZSH_DIR/function.zsh
+source_if_readable $LUE_ZSH_DIR/alias.zsh
+source_if_readable $LUE_ZSH_DIR/setting.zsh
+source_if_readable $LUE_ZSH_DIR/plugin.zsh
