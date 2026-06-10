@@ -24,14 +24,12 @@ fi
 alias diff='diff --color=auto'
 alias df='df -h'
 
-# 安装：brew install nvim
+# 安装：brew install neovim
 if command -v nvim >/dev/null 2>&1; then
     export EDITOR=nvim
     export VISUAL=nvim
 
     alias v="nvim"
-    alias vi="nvim"
-    alias vim="nvim"
 fi
 
 alias cls="clear"

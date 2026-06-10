@@ -85,17 +85,16 @@ if zplugin_load zsh-autocomplete marlonrichert; then
     bindkey "$terminfo[kcbt]" menu-select
 fi
 
-# # 安装：brew install fzf
-# if command -v fzf >/dev/null 2>&1; then
-#     source <(fzf --zsh)
-#     export FZF_DEFAULT_OPTS="
-#     --height 40%
-#     --layout=reverse
-#     --border
-#   "
-
-#     zplugin_load fzf-tab Aloxaf
-# fi
+# 安装：brew install fzf
+if command -v fzf >/dev/null 2>&1; then
+    export FZF_DEFAULT_OPTS="
+    --height 40%
+    --layout=reverse
+    --border
+    "
+    source <(fzf --zsh)
+    # zplugin_load fzf-tab Aloxaf
+fi
 
 # if zplugin_load zsh-history-substring-search zsh-users; then
 #     bindkey "^[[A" history-substring-search-up
