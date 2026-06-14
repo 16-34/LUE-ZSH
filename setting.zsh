@@ -8,6 +8,15 @@ bindkey '\e[1;3D' backward-word
 # Alt + 方向右：跳转到下一个词
 bindkey '\e[1;3C' forward-word
 
+# 在编辑器中编辑命令 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+
+# 撤销重做
+bindkey '^xu' undo
+bindkey '^xr' redo
+
 # 去掉路径分隔符 /
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 

@@ -23,6 +23,10 @@ fi
 
 alias diff='diff --color=auto'
 alias df='df -h'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -Iv'
+
 
 # 安装：brew install neovim
 if command -v nvim >/dev/null 2>&1; then
