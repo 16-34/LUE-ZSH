@@ -11,6 +11,11 @@ else
     alias la="ls -al"
 fi
 
+# 安装：brew install btop
+if command -v btop >/dev/null 2>&1; then
+    alias top="btop"
+fi
+
 # 安装：brew install bat
 if command -v bat >/dev/null 2>&1; then
     alias cat="bat"
