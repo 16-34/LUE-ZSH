@@ -8,6 +8,9 @@ bindkey '\e[1;3D' backward-word
 # Alt + 方向右：跳转到下一个词
 bindkey '\e[1;3C' forward-word
 
+# 删除光标前的行内容
+bindkey '^U' backward-kill-line
+
 # 在编辑器中编辑命令 
 autoload -Uz edit-command-line
 zle -N edit-command-line
